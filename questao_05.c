@@ -16,9 +16,11 @@ void create_slot(int slot[][COLS])
 {
     int linha, coluna;
 
-    for (linha = 0; linha < LINES; linha++) {
+    for (linha = 0; linha < LINES; linha++)
+    {
         printf("Enter line values (5 values) %d:\n", linha + 1);
-        for (coluna = 0; coluna < COLS; coluna++) {
+        for (coluna = 0; coluna < COLS; coluna++)
+        {
             scanf("%d", &slot[linha][coluna]);
         }
     }
@@ -33,7 +35,8 @@ int main(void)
     create_slot(slot);
     int comp = slot[0][0];
     int count_prize = 0;
-    while (lines < LINES && count_prize != COLS) {
+    while (lines < LINES && count_prize != COLS)
+    {
         while (cols < COLS)
         {
             if (comp == slot[lines][cols] && premio[lines][cols])
